@@ -151,13 +151,13 @@
 
       juno = utilities.mkCosmosGoApp {
         name = "juno";
-        version = "v2.3.0-beta.2";
+        version = "v12.0.0";
         src = inputs.juno-src;
         vendorSha256 = "sha256-2/uu546UYHDBiTMr8QL95aEF7hI8bTkO/JCYMcLM5kw=";
         tags = ["netgo"];
         preFixup = utilities.wasmdPreFixupPhase "junod";
         dontStrip = true;
-        buildInputs = [libwasmvm_1beta7];
+        buildInputs = [libwasmvm_1];
       };
 
       terra = utilities.mkCosmosGoApp {
